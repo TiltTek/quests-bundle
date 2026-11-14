@@ -4,6 +4,20 @@ All notable changes to `tilttek/quests-bundle` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## 0.2.0-alpha - 2026-11-14
+
+### Changed
+
+- `DbalDuelStore::transition()`: an `UPDATE … WHERE status = ?` that changes a duel only from the status it was read
+  in, for `tilttek/quests` whose answers, expiries and wins no longer overwrite one another.
+- The bundle requires `tilttek/quests` `^0.2@dev`, whose `Store\DuelStore::transition()` `DbalDuelStore` implements.
+
+### Fixed
+
+- `QuestsPrivacy` implements `Phil\PrivacyBundle\Application\Contract\PersonalDataExporter` and `PersonalDataEraser`,
+  the interfaces `phil/privacy-bundle` exposes, and the bundle registers it when they exist: the export and the
+  erasure of a member now reach it.
+
 ## 0.1.0-alpha - 2026-11-11
 
 ### Added
