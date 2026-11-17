@@ -4,6 +4,17 @@ All notable changes to `tilttek/quests-bundle` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## 0.3.0-alpha - 2026-11-17
+
+Next version: 0.3.0-alpha, for team quests refused until the application gives its `TeamMembership`.
+
+### Changed
+
+- `Tilttek\Quests\Contract\TeamMembership` is a service of the bundle, given to `Quests` for `tilttek/quests` 0.3:
+  the library's `NoTeamMembership`, which refuses every team quest, until the application aliases the interface to
+  its own service. An application that uses team quests aliases it before upgrading.
+- It requires `tilttek/quests` 0.3.
+
 ## 0.2.0-alpha - 2026-11-14
 
 ### Changed
